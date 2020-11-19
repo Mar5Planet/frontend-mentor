@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+  <!-- CSS only -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/fc8f079452.js" crossorigin="anonymous"></script>
+  <!-- JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Bookmark landing page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section id="Navigation-bar">
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo-bookmark.svg"  id="navbar-brand" alt="bookmark-landingpage">
+      </a>
+      <button class="navbar-toggler" type="button" onclick="change();" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <img id="img" src="images/icon-hamburger.svg" alt="hamburger-img">
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Features <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Pricing <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Contact <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <button class="btn red-btn" type="button" name="button">Login</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </section>
+
+  <section id="Top-section">
+    <div class="top-content">
+      <div class="top-container">
+        <div class="top-text">
+          <h1>A Simple Bookmark Manager</h1>
+          <p>A clean and simple interface to organize your favourite websites. Open a new
+          browser tab and see your sites load instantly. Try it for free.</p>
+          <button class="btn button-purple" type="button" name="button">Get it on Chrome</button>
+          <button class ="btn button-light" type="button" name="button">Get it on Firefox</button>
+        </div>
+        <div class="top-img">
+          <img src="images/illustration-hero.svg" alt="top-img">
+        </div>
+      </div>
+      <div class="bg-design">
+      </div>
+    </div>
+  </section>
+
+  <section id="Feature-section">
+    <div class="feature-content">
+      <div class="feature-container">
+        <div class="feature-text center-content">
+          <h2>Features</h2>
+          <p>Our aim is to make it quick and easy for you to access your favourite websites.
+          Your bookmarks sync between your devices so you can access them on the go.</p>
+        </div>
+        <div class="tabContainer">
+          <div class="buttonContainer">
+            <button onclick="showPanel(0);" class="feature-topbtn" type="button" name="button">Simple Bookmarking</button>
+            <button onclick="showPanel(1);" type="button" name="button">Speedy Searching</button>
+            <button onclick="showPanel(2);" type="button" name="button">Easy Sharing</button>
+          </div>
+          <div class="tabPanel">
+            <img src="images/illustration-features-tab-1.svg" alt="tab-1-img">
+            <h2>Bookmark in one click</h2>
+            <p>Organize your bookmarks however you like. Our simple drag-and-drop interface
+              gives you complete control over how you manage your favourite sites.</p>
+            <button class="hide btn button-purple" type="button" name="button">More Info</button>
+          </div>
+          <div class="tabPanel">
+            <img src="images/illustration-features-tab-2.svg" alt="tab-2-img">
+            <h2>Intelligent search</h2>
+            <p>Our powerful search feature will help you find saved sites in no time at all.
+            No need to trawl through all of your bookmarks.</p>
+            <button class="hide btn button-purple" type="button" name="button">More Info</button>
+          </div>
+          <div class="tabPanel">
+            <img src="images/illustration-features-tab-3.svg" alt="tab-2-img">
+            <h2>Share your bookmarks</h2>
+            <p>Easily share your bookmarks and collections with others. Create a shareable
+            link that you can send at the click of a button.</p>
+            <button class="hide btn button-purple" type="button" name="button">More Info</button>
+          </div>
+        </div>
+      </div>
+      <div class="bg-design">
+      </div>
+    </div>
+
+  </section>
+
+
+  <section class="Extension-Section">
+    <div class="extension-container container">
+      <div class="center-content">
+        <h2>Download the extension</h2>
+        <p>We’ve got more browsers in the pipeline. Please do let us know if you’ve
+        got a favourite you’d like us to prioritize.</p>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 align-self-start">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <img src="images/logo-chrome.svg" alt="chrome-logo">
+              <h5 class="card-title">Add to Chrome</h5>
+              <p class="card-text">Minimum version 62</p>
+              <img class="dots" src="images/bg-dots.svg" alt="dots">
+              <button class="btn button-purple" type="button" name="button">Add & Install Extension</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 align-self-center">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <img src="images/logo-firefox.svg" alt="firefox-logo">
+              <h5 class="card-title">Add to Firefox</h5>
+              <p class="card-text">Minimum version 55</p>
+              <img class="dots" src="images/bg-dots.svg" alt="dots">
+              <button class="btn button-purple" type="button" name="button">Add & Install Extension</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 align-self-end">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <img src="images/logo-opera.svg" alt="opera-logo">
+              <h5 class="card-title">Add to Opera</h5>
+              <p class="card-text">Minimum version 46</p>
+              <img class="dots" src="images/bg-dots.svg" alt="dots">
+              <button class="btn button-purple" type="button" name="button">Add & Install Extension</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="FAQ">
+    <div class="FAQ-container">
+        <h2>Frequently Asked Questions</h2>
+        <p>Here are some of our FAQs. If you have any other questions you'd like
+        answered please feel free to email us.</p>
+    <div id="accordion">
+      <div class="card">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+        <div class="card-header1" id="headingOne">
+          <h5 class="mb-0">
+            What is Bookmark?
+          </h5>
+            <img id="arrow" src="images/icon-arrow.svg" alt="">
+        </div>
+        </button>
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+          <div class="card-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt
+            justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        <div class="card-header1" id="headingTwo">
+          <h5 class="mb-0">
+            How can I request a new browser?
+          </h5>
+            <img id="arrow" src="images/icon-arrow.svg" alt="">
+        </div>
+        </button>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+          <div class="card-body">
+            <p>Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
+            Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
+            ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
+            Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        <div class="card-header1" id="headingThree">
+          <h5 class="mb-0">
+            Is there a mobile app?
+          </h5>
+            <img id="arrow" src="images/icon-arrow.svg" alt="">
+        </div>
+        </button>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+          <div class="card-body">
+            <p>Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum
+            urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed
+            sollicitudin ex et ultricies bibendum.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <button class="button-bottom btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+        <div class="card-header1" id="headingFour">
+          <h5 class="mb-0">
+            What about other Chromium browsers?
+          </h5>
+            <img id="arrow" src="images/icon-arrow.svg" alt="">
+        </div>
+        </button>
+        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+          <div class="card-body">
+            <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="btn button-purple" type="button" name="button">More Info</button>
+    </div>
+  </section>
+
+  <section id="Call-to-action">
+    <div class="cta">
+     <h4>35,000+ already joined</h4>
+     <h3>Stay up-to-date with what we’re doing</h3>
+     <form id="myForm" class="cta-form" action="index.html" method="post">
+       <input id="input" type="email" name="email-input" value="" placeholder="Enter your email address" >
+       <button class="btn red-btn" type="submit" name="button">Contact Us</button>
+     </form>
+     <div id="error">
+
+     </div>
+    </div>
+  </section>
+
+  <section id="Footer-section">
+    <div class="footer-container">
+      <img src="images/logo-bookmark2.svg" alt="bookmark-2">
+      <ul>
+        <li>
+          <a href="#">Features</a>
+        </li>
+        <li>
+          <a href="#">Pricing</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+      <div class="social-media">
+        <i class="fab fa-twitter fa-2x"></i>
+        <i class="fab fa-facebook-square fa-2x"></i>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Mar Mustafa</a>.
+    </p>
+
+    <script src="index.js"></script>
+  </footer>
+</body>
+</html>
